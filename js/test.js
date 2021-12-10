@@ -1,6 +1,5 @@
-baguetteBox.run('.gallery');
 const gallery = document.querySelector('#gallery')
-let pictures = '';
+let picture = '';
 
 const alt1 = 'Hay Bales';
 const alt2 = 'Lake';
@@ -28,7 +27,6 @@ const cap10 = "Sunset at the coast! The sky turned a lovely shade of orange.";
 const cap11 = "I did a tour of a cave today and the view of the landscape below was breathtaking.";
 const cap12 = "I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.";
 
-
 function pad(num, size) {
     num = num.toString();
     while (num.length < size) num = "0" + num;
@@ -45,3 +43,6 @@ for (let i=1; i<=12; i++) {
 }
 
     gallery.innerHTML = pictures;
+
+
+
