@@ -1,0 +1,9 @@
+#searchbar {
+  @include center;
+  @include rounded;
+  border-color: #eee;
+  margin-top: 2rem;
+  width: 35rem;
+  height: 3rem;
+  padding-left: 10px;
+}

@@ -1,0 +1,20 @@
+@mixin center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin rounded {
+  border-radius: 7px;
+}
+
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  @if $value == null {
+    @warn "'#{$break}' is not a valid breakpoint name.";
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
