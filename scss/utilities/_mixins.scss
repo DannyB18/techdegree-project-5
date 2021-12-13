@@ -1,7 +1,9 @@
-@mixin center {
+@mixin center($top: null, $bot: null) {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: $top;
+  margin-bottom: $bot;
 }
 
 @mixin rounded {
@@ -17,4 +19,9 @@
       @content;
     }
   }
+}
+
+@mixin grid-width($items) {
+  max-width: calc-width($items, $thumb-width, $grid-col-gap);
+  grid-template-columns: repeat($items, minmax($thumb-width, 1fr));
 }

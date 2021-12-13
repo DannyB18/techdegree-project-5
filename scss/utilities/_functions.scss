@@ -1,0 +1,4 @@
+@function calc-width($items, $item-width, $col-gap) {
+  $total-width: ($items * $item-width) + ($col-gap * ($items - 1));
+  @return $total-width;
+}

@@ -1,10 +1,13 @@
 #gallery {
-  @include center;
-  max-width: 900px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  @include center(2rem, 2rem);
+  @include grid-width(1);
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
-  gap: 2rem 1.5rem;
+  grid-auto-rows: 1fr;
+  gap: 32px $grid-col-gap;
+  @include mq("med") {
+    @include grid-width(3);
+  }
+  @include mq("lg") {
+    @include grid-width(4);
+  }
 }

@@ -38,9 +38,11 @@ function pad(num, size) {
 for (let i=1; i<=12; i++) {
     i = pad(i,2);
     pictures += `
+    <div class="img-div">
     <a href="images/photos/${i}.jpg" data-caption="${i}" class="thumbnail">
         <img src="images/thumbnails/${i}.jpg" alt="Hay Bales">
     </a>
+    </div>
     `;
 }
 
