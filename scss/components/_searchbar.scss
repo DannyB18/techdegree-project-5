@@ -1,12 +1,8 @@
 #searchbar {
-  @include center;
+  @include center(2rem);
   @include rounded;
   border-color: #eee;
-  margin-top: 2rem;
-  width: 85%;
+  width: 55%;
   height: 3rem;
   padding-left: 10px;
-  @include mq("lg") {
-    width: 35rem;
-  }
 }

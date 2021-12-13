@@ -1,13 +1,15 @@
 #gallery {
   @include center(2rem, 2rem);
-  @include grid-width(1);
+  max-width: 872px;
   display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 200px);
   grid-auto-rows: 1fr;
-  gap: 32px $grid-col-gap;
-  @include mq("med") {
-    @include grid-width(3);
+  gap: 2rem 1.5rem;
+  & img {
+    margin: auto;
   }
-  @include mq("lg") {
-    @include grid-width(4);
+  & a {
+    max-width: $thumb-width;
   }
 }
