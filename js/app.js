@@ -1,5 +1,6 @@
 const gallery = document.querySelector('#gallery')
-let pictures = '';
+const search = new Filter('search', 'data-caption');
+baguetteBox.run('.gallery');
 
 const altText = new Map([
     [01, 'Hay Bales'],
@@ -37,6 +38,8 @@ function pad(num, size) {
     return num;
 }
 
+let pictures = '';
+
 for (let i=1; i<=12; i++) {
     let alt = altText.get(i);
     let caption = captions.get(i)
@@ -47,9 +50,5 @@ for (let i=1; i<=12; i++) {
     </a>
     `;   
 }
-
     gallery.innerHTML = pictures;
-
-    const search = new Filter('search', 'data-caption');
-
-    baguetteBox.run('.gallery');
+  
