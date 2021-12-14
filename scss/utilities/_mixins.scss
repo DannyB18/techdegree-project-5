@@ -10,6 +10,8 @@
   border-radius: 7px;
 }
 
+// Used previously before making grid responsive on its own.
+// Leaving here in case needed in the future.
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
   @if $value == null {
